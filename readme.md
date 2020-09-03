@@ -62,21 +62,25 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 **Je opdracht:** [Moco Museum](https://mocomuseum.nl)
 
-**Screenshot(s):**
+**Screenshots:**
 
-*Pagina 1*
+*Pagina 1 | Desktop*
 
 ![Screenshot van de eerste pagina op een laptop](images/proces/pagina1_full.png)
 
+*Pagina 1 | Smartphone*
+
 ![Screenshot van de eerste pagina op een smartphone](images/proces/pagina1_responsive.png)
 
-*Pagina 2*
+*Pagina 2 | Desktop*
 
 ![Screenshot van de tweede pagina op een laptop](images/proces/pagina2_full.png)
+
+*Pagina 2 | Smartphone*
 
 ![Screenshot van de tweede pagina op een smartphone](images/proces/pagina2_responsive.png)
 
 
 **Breakdown-schets(en):**
 
-![-voorlopige breakdownschets(en) van een of beide pagina's van de site die je gaat maken-](images/dummy-image.svg)
+![-voorlopige breakdownschets(en) van een of beide pagina's van de site die je gaat maken-](images/proces/thinking.png)
