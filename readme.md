@@ -60,11 +60,22 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 **Je focus:** Responsive
 
-**Je opdracht:** [Moco Museum](https://mocomuseum.com)
+**Je opdracht:** [Moco Museum](https://mocomuseum.nl)
 
 **Screenshot(s):**
 
-![screenshot(s) die een goed beeld geven van de website die je gaat maken](images/dummy-image.svg)
+*Pagina 1*
+
+![Screenshot van de eerste pagina op een laptop](images/proces/pagina1_full.png)
+
+![Screenshot van de eerste pagina op een smartphone](images/proces/pagina1_responsive.png)
+
+*Pagina 2*
+
+![Screenshot van de tweede pagina op een laptop](images/proces/pagina2_full.png)
+
+![Screenshot van de tweede pagina op een smartphone](images/proces/pagina2_responsive.png)
+
 
 **Breakdown-schets(en):**
 
