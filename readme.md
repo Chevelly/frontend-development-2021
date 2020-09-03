@@ -64,19 +64,19 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 **Screenshots:**
 
-*Pagina 1 | Desktop*
+*Pagina 1_desktop*
 
 ![Screenshot van de eerste pagina op een laptop](images/proces/pagina1_full.png)
 
-*Pagina 1 | Smartphone*
+*Pagina 1_small screen*
 
 ![Screenshot van de eerste pagina op een smartphone](images/proces/pagina1_responsive.png)
 
-*Pagina 2 | Desktop*
+*Pagina 2_desktop*
 
 ![Screenshot van de tweede pagina op een laptop](images/proces/pagina2_full.png)
 
-*Pagina 2 | Smartphone*
+*Pagina 2_small screen*
 
 ![Screenshot van de tweede pagina op een smartphone](images/proces/pagina2_responsive.png)
 
