@@ -58,7 +58,7 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 **Je startniveau:** *I'm blue da ba dee da ba daa*
 
-**Je focus:** Responsive
+**Je focus:** Responsive & Surface
 
 **Je opdracht:** [Moco Museum](https://mocomuseum.nl)
 
@@ -83,4 +83,4 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 **Breakdown-schets(en):**
 
-![-voorlopige breakdownschets(en) van een of beide pagina's van de site die je gaat maken-](images/proces/thinking.png)
+![Breakdownschets van de eerste pagina op een laptop](images/proces/breakdownschets.png)
