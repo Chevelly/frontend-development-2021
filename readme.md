@@ -39,10 +39,19 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 ### Stand van zaken
 
 -dit ging goed & dit was lastig-
+**+** door van te voren een breakdown schets te maken kon ik meteen een goede start maken met het plaatsen van de juiste elementen in mijn HTML document
+**+** door de oefeningen te maken heb ik een goede basis kunnen vormen waardoor ik tijdens het coderen gericht kon zoeken naar welke elementen ik nodig heb om het gewenste resultaat te behalen
+**+** door de tip van Robert om inspect element te gebruiken heb ik tijdens het coderen een beter begrip kunnen krijgen van hoe de moco website is opgebouwd
+
+**-** op het moment dat er veel regels code in mijn html/css staan raak ik het overzicht kwijt
+**-** ik heb goed begrip van wat een element kan doen, máár bij het samenvoegen van de verschillende elementen behaal ik helaas toch niet het gewenste resultaat
+**-** het is mij niet gelukt om een font toe te voegen wat ik van het web gedownload heb
+**-** ik heb te weinig tijd vrij in mijn agenda om fully gefocust te kunnen coderen waardoor ik deze week niet mijn doel (opzet van 2 pagina's) behaald heb
 
 **Screenshot(s):**
 
--screenshot(s) van hoe ver je bent-
+![Screenshots van de voortgang](images/proces/voortgang1.1.png)
+![Screenshots van de voortgang](images/proces/voortgang1.2.png)
 
 ### Agenda voor meeting
 
@@ -58,7 +67,7 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 **Je startniveau:** *I'm blue da ba dee da ba daa*
 
-**Je focus:** Responsive & Surface
+**Je focus:** ~~Responsive &~~ Surface
 
 **Je opdracht:** [Moco Museum](https://mocomuseum.nl)
 
