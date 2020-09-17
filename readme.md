@@ -47,6 +47,7 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 **+** door de tip van Robert om inspect element te gebruiken heb ik tijdens het coderen een beter begrip kunnen krijgen van hoe de moco website is opgebouwd
 
 
+
 *-dit was lastig-*
 
 **-** op het moment dat er veel regels code in mijn html/css staan raak ik het overzicht kwijt
