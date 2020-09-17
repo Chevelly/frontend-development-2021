@@ -38,7 +38,7 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ### Stand van zaken
 
--dit ging goed & dit was lastig-
+*-dit ging goed-*
 
 **+** door van te voren een breakdown schets te maken kon ik meteen een goede start maken met het plaatsen van de juiste elementen in mijn HTML document
 
@@ -46,6 +46,8 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 **+** door de tip van Robert om inspect element te gebruiken heb ik tijdens het coderen een beter begrip kunnen krijgen van hoe de moco website is opgebouwd
 
+
+*-dit was lastig-*
 
 **-** op het moment dat er veel regels code in mijn html/css staan raak ik het overzicht kwijt
 
