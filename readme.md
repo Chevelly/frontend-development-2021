@@ -1,33 +1,46 @@
 # Procesverslag
 **Auteur:** Chevelly Hiralall, 500700481
 
-Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). Nb. de standaardstructuur en de spartaanse opmaak zijn helemaal prima. Het gaat om de inhoud van je procesverslag. Besteedt de tijd voor pracht en praal aan je website.
-
-
 
 ## Bronnenlijst
-1. [Hulp bij het schrijven van Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-2. [Hulp bij het schrijven van Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-3. [Hulp bij het schrijven van Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-4. [Hulp bij het schrijven van Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-5. [Hulp bij het schrijven van Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-6. [Hulp bij het schrijven van Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+1. [Hamburgermenu, line 28 (index.html)](https://www.youtube.com/watch?v=kKRpeFk613I)
+2. [Font-awesome stylesheet, line 49 (index.html)](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css)
+3. [< form > element, line 115 (index.html)](https://developer.mozilla.org/nl/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)
+4. [< strong > element, line 127 (index.html)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong)
+5. [< cite > element, line 106, (stories.html)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite)
+6. [content pseudo-element, line 70 (style.css)](https://css-tricks.com/css-content/)
+7. [translateX, line 467 (style.css)](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translateX)
+8. [Animation-timing-function, line 560 (style.css)](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function)
+9. [Element slider, line 634 (style.css)](https://css-tricks.com/css-only-carousel/)
+10. [border-image-source, line 765 (style.css)](https://developer.mozilla.org/en-US/docs/Web/CSS/border-image-source)
+11. [border-image-slice, line 770 (style.css)](https://developer.mozilla.org/en-US/docs/Web/CSS/border-image-slice)
+12. [border-image-repeat: stretch, line 773 (style.css)](https://developer.mozilla.org/en-US/docs/Web/CSS/border-image-repeat)
+13. [linear-gradient, line 800 (style.css)](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+14. [classList.toggle, line 10 (script.js)](https://dlo.mijnhva.nl/d2l/common/dialogs/quickLink/quickLink.d2l?ou=192602&type=coursefile&fileId=FED+20-21+-+Blok+1+-+Oefening+media+queries.pdf)
 
 
 ## Eindgesprek (week 7/8)
 
 *-dit ging goed-*
 
-**++**
+**++** Toen ik eenmaal de switch gemaakt had van het namaken van de Tickets pagina naar het namaken van de Stories pagina was ik erg gemotiveerd om een leuke toevoeging te doen aan de pagina waarmee ik de gebruiker kan verrassen. Ik ben dan ook ontzettend trots op de iconische Banksy versnipperaar die ik met CSS na heb kunnen maken.
+
+**++** Waar ik in dit vak erg tegenaan liep was mijn tijdsplanning. Omdat dit mijn herkansingsvak is en ik hiernaast nog het Behavioural Design project volg hield ik vaak weinig tot geen tijd over om aan mijn websiteopdracht te werken en dat vond ik erg jammer. Ik heb niet voor niks ja gezegd tegen het opnieuw doen van dit vak.. dat was omdat ik Frontend Development heel graag onder de knie wilde hebben. In de herfstvakantie heb ik hierom een flink aantal uren vrij gehouden om op mezelf op de opdracht te kunnen storten en dat was echt fantastisch. Als ik eenmaal lekker in the flow zit en mijn mind in HTML & CSS termen dacht ging het als een speer.
+
+**++** In tegenstelling tot eerdere HTML/CSS/JS opdrachten heb ik mijn code dit keer voorzien van heel veel comments. In de huiswerkopdrachten heb ik goed gelet op de manier waarop Sanne het deed, namelijk een erg toelichtende manier. Door dit zelf ook toe te passen maak ik de code voor een ander maar ook voor mezelf op een later moment goed te begrijpen.
 
 
 *-dit was lastig-*
 
-**--**
+**--** tijdens de intake had ik aangegeven dat ik de landingspagina en de tickets pagina wilde namaken maar tijdens het coderen van de Tickets pagina wat bestond uit een gigantisch formulier raakte ik erg gedemotiveerd om het mij niet uitdaagde. Daarnaast had ik al even met een form element mogen spelen op de landingspagina. Hierom heb ik het besluit genomen mijn plan om te gooien en de Stories pagina na te maken in plaats van de Tickets pagina. Op de Stories pagina heb ik gekozen om de slider na te maken en de resterende ruimte te gebruiken voor een bijzondere toevoeging aka surface experience.
+
+**--** net als bij voortgang 3 vond ik het bij de weg naar het eindresultaat af en toe erg lastig om rekening te houden met te pseudo-selecteren wanneer ik niet in chronologische volgorde werkte. Ik heb mijn code een behoorlijk aantal keer 'kapot' gemaakt omdat ik middenin mijn HTML zat te wroeten. Dit zorgde voor behoorlijk wat vertraging.
+
+**--** ik heb vorig jaar het vak Frontend for Designers gevolgd bij Sanne. En daar was javascript de boeman en werden we gemotiveerd om enkel in CSS attributen te denken. Ik merkte dat dit bij deze opdracht nog niet helemaal uit mijn systeem was omdat ik eerder dacht in CSS oplossingen dan in het toevoegen van Javascript waardoor ik op het laatste moment mijn code voor het nieuwsbrief formulier aan heb moeten passen om toch een stukje Javascript in mijn opdracht te hebben.
 
 **Screenshot(s):**
 
-
+![Screenshots van het eindresultaat](images/proces/eindresultaat.png)
 
 
 ## Voortgang 3 (week 6)
@@ -47,7 +60,7 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 **Screenshot(s):**
 
-![Screenshots van de voortgang](images/proces/classesoud.png)
+![Screenshots van de voortgang](images/proces/voortgang3.png)
 
 ### Agenda voor meeting
 
