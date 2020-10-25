@@ -6,41 +6,204 @@
 }
 
 body {
-    font-family: 'Futura Std', sans-serif;
     background-color: #ff81cb;
+    font-family: 'Futura Std', sans-serif;
     margin: 0;
 }
 
+/* font importeren uit foldermappen */
 @font-face {
-    font-family: 'caslongraduploaded_file';
-    src: url('caslongrad-webfont.woff2') format('woff2'),
-         url('caslongrad-webfont.woff') format('woff');
-    font-weight: normal;
+    font-family: 'caslongradup';
+    src: url('../fonts/caslongrad.otf'),
+        url('../fonts/caslongrad.ttf');
     font-style: normal;
+    font-weight: normal;
 }
 
+/**********/
+/* HEADER */
+/**********/
 header {
-    position: relative;
-}
-
-.header {
+    align-items: center;
+    background: #fff;
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
     position: fixed;
+    text-decoration: none;
     width: 100%;
     z-index: 200;
-    display: flex;
-    margin-right: 40px;
-    justify-content: space-between;
-    align-items: center;
-    height: 90px;
-    padding: 0 40px 0 60px;
-    font-size: 12px;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #000;
-    background: #fff;
 }
 
-.navtalen {
+header > a:first-of-type img {
+    display: block;
+    height: 80px;
+    left: 0;
+    padding: 0;
+}
+
+/***************************/
+/* NAVIGATIE HAMBURGERMENU */
+/***************************/
+nav {
+    margin-right: 30px;
+}
+
+/* om de checkbox te verbergen */
+nav input {
+    display: none;
+}
+
+/* tweede/middelste streep van hamburgermenu */
+.open {
+    background-color: black;
+    display: block;
+    height: 1px;
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 23px;
+}
+
+/* eerste/bovenste streep van hamburgermenu */
+.open:before {
+    content: ""; /* pseudo-element wat niets selecteert dat op de pagina bestaat, maar iets nieuws aan de pagina toevoegt */
+    background-color: black;
+    width: 23px;
+    height: 1px;
+    display: block;
+    position: relative;
+    top: -9px;
+    transform: rotate(0deg);
+    transition: all 0.3s ease;
+}
+
+/* derde/onderste streep van hamburgermenu */
+.open:after {
+    content: "";
+    background-color: black;
+    width: 23px;
+    height: 1px;
+    display: block;
+    position: relative;
+    top: 7px;
+    transform: rotate(0deg);
+    transition: all 0.3s ease;
+}
+
+.burgerOpen {
+    display: block;
+    height: 20px;
+    padding: 15px;
+    width: 23px;
+}
+
+.burger {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 60px;
+    left: 0;
+    background: white;
+}
+
+.burger > ul:first-of-type {
+    position: relative;
+    top: 40%;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    padding-bottom: 20px;
+    margin-top: -200px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.burger ul:first-of-type li a {
+    display: block;
+    color: #ff81cb;
+    text-decoration: none;
+    transition: color 0.2s;
+    padding: 10px 0;
+}
+
+.burger ul:first-of-type li a:active {
+    text-decoration: underline;
+}
+
+.burger ul:first-of-type li a:hover {
+    text-decoration: underline;
+}
+
+/* de <ul> elementen in het hamburgermenu zijn op voorhand verborgen */
+.burgerEffects {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+/* het burgerToggle id in combinatie met het checked pseudo element */
+/* wanneer de checkbox is aangevinkt, zal de class burgerEffects de <ul> elementen zichtbaarheid meegeven */
+#burgerToggle:checked ~ .burgerEffects {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s;
+}
+
+#burgerToggle:checked ~ .burgerOpen .open {
+    background-color: white;
+}
+
+/* wanneer de checkbox is aangevinkt, zullen de eerste en derde streep roteren tot een kruis volgens onderstaande CSS-structuur */
+#burgerToggle:checked ~ .burgerOpen .open:before {
+    content: "";
+    background-color: black;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 300;
+}
+
+#burgerToggle:checked ~ .burgerOpen .open:after {
+    content: "";
+    background-color: black;
+    transform: rotate(-45deg);
+    position: relative;
+    top: 0;
+    right: 0;
+    z-index: 300;
+}
+
+/* hamburgermenu heeft een roze kleur in stories.html */
+.tweedepagina .open {
+    background-color: #ff81cb;
+}
+
+.tweedepagina .open:before {
+    background-color: #ff81cb;
+}
+
+.tweedepagina .open:after {
+    background-color: #ff81cb;
+}
+
+.tweedepagina #burgerToggle:checked ~ .burgerOpen .open:before {
+    background-color: #ff81cb;
+}
+
+.tweedepagina #burgerToggle:checked ~ .burgerOpen .open:after {
+    background-color: #ff81cb;
+}
+
+
+/*******************/
+/* NAVIGATIE TALEN */
+/*******************/
+header ul:nth-of-type(odd) {
     display: flex;
     position: absolute;
     bottom: -40px;
@@ -53,90 +216,154 @@ header {
     left: 0;
     right: 0;
     border-top: 1px solid #f5f5f5;
+    font-size: 12px;
     letter-spacing: .1em;
+    color: #000;
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+header li {
+    padding-left: 4px;
+}
+
+li.active a {
+    font-weight: bolder;
 }
 
 a {
     text-decoration: none;
 }
 
-main {
-    padding-top: 130px;
-    position: relative;
+a:visited {
+    color: black;
 }
 
-.menucontainer {
-    margin-top: 0;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+/***********************/
+/* SOCIAL MEDIA ICONS */
+/***********************/
+.icon {
     display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: stretch;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin-top: 90%;
+    padding: 10em;
 }
 
-.menublokje {
+.fa {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 27px;
+    height: 27px;
+    padding-top: 5px;
+    border: 1px solid #ff81cb;
+    border-radius: 27px;
+    color: #ff81cb;
+}
+
+.fa:active {
+    background-color: #ff81cb;
+    color: #fff;
+}
+
+.fa:visited {
+    color: #ff81cb;
+}
+
+/********/
+/* MAIN */
+/********/
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    height: calc(100vh - 32px);
+    margin-top: 0;
+    padding-top: 80px;
+}
+
+/*********************/
+/* 4 ARTICLE BLOKKEN */
+/*********************/
+
+/* elk article heeft een eigen background-image */
+main article:first-of-type {
+    background-image: url('https://mocomuseum.com/uploads/2018/03/home-3.jpg');
+}
+
+/* en bij het hoveren weer een andere background-image */
+main article:first-of-type:hover {
+    background-image: url('https://mocomuseum.nl/uploads/2018/03/bg_opening-hours.jpg');
+}
+
+main article:nth-of-type(2) {
+    background-image: url('https://mocomuseum.com/uploads/2018/03/home-1.jpg');
+}
+
+main article:nth-of-type(2):hover {
+    background-image: url('');
+}
+
+main article:nth-of-type(3) {
+    background-image: url('https://mocomuseum.com/uploads/2018/10/New_Exhibition_Dots.jpg');
+}
+
+main article:nth-of-type(3):hover {
+    background-image: url('https://mocomuseum.nl/uploads/2020/02/DiamondRoom-copy-2.jpg');
+}
+
+main article:nth-of-type(4) {
+    background-image: url('https://mocomuseum.com/uploads/2018/03/bg_landingpage.jpg');
+}
+
+main article:nth-of-type(4):hover {
+    background-image: url('https://mocomuseum.nl/uploads/2018/11/wat-te-doen-met-pubers-in-de-vakantie-1600.jpg');
+}
+
+main article {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    left: 0;
+    top: 0;
     width: 100%;
-    height: 25%;
-    color: #000;
+    height: 100%;
     overflow: hidden;
-}
-
-main li:first-of-type div {
-    background-image: url('https://mocomuseum.com/uploads/2018/03/home-3.jpg');
-}
-
-main li:nth-of-type(2) div {
-    background-image: url('https://mocomuseum.com/uploads/2018/03/home-1.jpg');
-}
-
-main li:nth-of-type(3) div {
-    background-image: url('https://mocomuseum.com/uploads/2018/10/New_Exhibition_Dots.jpg');
-}
-
-main li:nth-of-type(4) div {
-    background-image: url('https://mocomuseum.com/uploads/2018/03/bg_landingpage.jpg');
-}
-
-.menubg {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    transition: opacity .3s ease-in;
     z-index: 2;
 }
 
-.menutitel {
-    font-family: 'caslongraduploaded_file', sans-serif;
-    font-size: 1.8em;
+article h2 {
+    margin: 0;
+    font-family: 'caslongradup', sans-serif;
+    font-size: 2em;
     z-index: 3;
     text-align: center;
 }
 
-.ondertitel {
-    color: #000;
-    font-size: 1em;
-    z-index: 3;
+main article:first-of-type {
+    color: #ff81cb;
 }
 
-.menuklik {
+main article:nth-of-type(4) h2 {
+    color: #fff;
+}
+
+article p {
+    margin: 0;
+    color: #000;
+    font-size: 1.1em;
+    z-index: 3;
+    text-align: center;
+}
+
+article a {
     display: block;
     position: absolute;
     width: 100%;
@@ -144,4 +371,474 @@ main li:nth-of-type(4) div {
     top: 0;
     left: 0;
     z-index: 99;
+}
+
+/*****************/
+/* 2 CTA-BUTTONS */
+/*****************/
+main button {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 7px;
+    padding-bottom: 4%;
+    bottom: 30px;
+    font-family: 'caslongradup', sans-serif;
+    font-size: 1em;
+    line-height: 1;
+    border: none;
+    z-index: 200;
+
+    /* om het standaard randje bij focus niet te tonen */
+    outline: none;
+
+    /* nodig voor telefoons */
+    appearance: none;
+}
+
+main button:first-of-type {
+    right: 88px;
+    width: 95px;
+    height: 95px;
+    color: white;
+    background: black;
+    border-radius: 100%;
+}
+
+main button:nth-of-type(2) {
+    right: -20px;
+    width: 128.5px;
+    height: 128.5px;
+    color: red;
+    background: white;
+    border-radius: 128.5px;
+}
+
+/* een animatie die de grootte van de CTA-buttons transformeert */
+@keyframes puls-animatie {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+main button {
+    animation: puls-animatie 1.3s alternate infinite;
+    /* de animatie duurt 1.3 seconden en herhaalt eindeloos voor een pulserend effect */
+}
+
+/**********/
+/* FOOTER */
+/**********/
+footer {
+    display: block;
+    position: relative;
+    width: 100%;
+    min-height: 32px;
+}
+
+span {
+    display: inline-block;
+    position: absolute;
+    padding: 0 10px;
+    max-width: 70em;
+    height: 32px;
+    font-family: "Futura Std", sans-serif;
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 700;
+    color: white;
+    background: black;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    animation: slideinjedmslike 0.8s ease;
+    /* de animatie duurt 0.8s en begint langzaam en vervolgens snel, voordat hij langzaam eindigt */
+}
+
+/* een animatie die het <span> element horizontaal herpositioneert, van off-canvas tot zichtbaar in beeld */
+@keyframes slideinjedmslike {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+/************************/
+/* FORMULIER NEWSLETTER */
+/************************/
+form {
+    background-color: #fff;
+    color: #ff81cb;
+    font-size: 30px;
+    font-weight: 900;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 36px;
+    margin: 0;
+    padding: 15px 0 0 0;
+    opacity: 0;
+    transition: .5s;
+}
+
+/* class die met js toegevoegd wordt aan het <form> element wanneer op het <span> element geklikt wordt */
+/* het formulier wordt zichtbaar en bovenop alle andere elementen geplaatst */
+form.toonForm {
+    opacity: 1;
+    z-index: 275;
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+fieldset label {
+    font-size: 18px;
+}
+
+#email {
+    flex: 1;
+    width: 50%;
+    font-size: 40px;
+    margin: 0 20px;
+    background-color: #fff2fd;
+    border: none;
+    overflow: visible;
+    font-family: "Futura Std", sans-serif;
+    line-height: 1.15;
+}
+
+fieldset button {
+    background-color: #ff81cb;
+    color: #fff;
+    border: none;
+    margin: 0;
+
+    font-family: "Futura Std", sans-serif;
+    max-width: 70em;
+    position: relative;
+    height: 52px;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/******************/
+/* RECENSIE BANNER */
+/******************/
+footer div {
+    height: 32px;
+    overflow: hidden;
+    position: relative;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+footer div > p {
+    position: absolute;
+    width: 2200px;
+    height: 100%;
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.8;
+    color: black;
+
+    /* Start positie */
+    transform: translateX(20%);
+
+    animation: recensie-animatie 25s linear infinite;
+    /* de animatie duurt 25 seconden en herhaalt eindeloos voor een banner effect */
+}
+
+/* een animatie die bovenstaand <p> element horizontaal herpositioneert, van start positie 20% tot off-canvas */
+@keyframes recensie-animatie {
+    0% {
+        transform: translateX(20%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+strong {
+    font-weight: 900;
+}
+
+
+/**************************/
+/* STORIES | DETAILPAGINA */
+/**************************/
+.tweedepagina header {
+    width: 100vw;
+    margin: 0;
+}
+
+.tweedepagina header > a:first-of-type img {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tweedepagina main {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+}
+
+/******************/
+/* ARTICLE SLIDER */
+/******************/
+.tweedepagina main article:first-of-type {
+    background-image: url('https://mocomuseum.nl/uploads/2020/10/Screenshot-2020-10-13-at-13.26.51.png');
+    z-index: 0;
+}
+
+.tweedepagina main article:nth-of-type(2) {
+    background-image: url('https://mocomuseum.nl/uploads/2020/02/Irma-de-Vries24249.jpg');
+    z-index: 1;
+}
+
+.tweedepagina main article:nth-of-type(3) {
+    background-image: url('https://mocomuseum.nl/uploads/2020/02/Kaleidoscope1.jpg');
+    z-index: -2;
+}
+
+.tweedepagina main article:nth-of-type(4) {
+    background-image: url('https://mocomuseum.nl/uploads/2020/01/ArtGirlRisingDuo.png');
+    z-index: -1;
+}
+
+.slideshow {
+    z-index: 100;
+    padding-bottom: 56.25%;
+    position: relative;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+}
+
+/* een animatie die onderstaand <article> element horizontaal herpositioneert, van start positie 200px tot off-canvas */
+@keyframes slide-animatie {
+    0% {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+
+    10% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    20% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    30% {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+}
+
+.slideshow > article {
+    position: absolute;
+    top: 0;
+    left: calc(80%-180px);
+    max-width: 900px;
+    opacity: 0;
+    animation: slide-animatie 10s infinite;
+    /* de animatie duurt 10 seconden en herhaalt eindeloos */
+}
+
+/* de animatie start pas na 2, 4 of 6 seconden voor de 2e, 3e en 4e article */
+.tweedepagina main article:nth-of-type(2) {
+    animation-delay: 2s;
+}
+
+.tweedepagina main article:nth-of-type(3) {
+    animation-delay: 4s;
+}
+
+.tweedepagina main article:nth-of-type(4) {
+    animation-delay: 6s;
+}
+
+.slideshow > article > h2 {
+    font-family: 'caslongradup', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: -2.5px;
+    max-width: 10em;
+    text-align: left;
+    bottom: 60px;
+    width: calc(100% - 100px);
+    color: white;
+}
+
+.slideshow > article > a {
+    display: block;
+    top: 165px;
+    left: 65px;
+    color: white;
+    font-size: 10px;
+    text-decoration: underline;
+}
+
+/*****************/
+/* 2 CTA-BUTTONS */
+/*****************/
+.tweedepagina button {
+    display: none; /* omwille van het kunstwerk */
+    bottom: -30px;
+}
+
+/**************/
+/* BANKSY ART */
+/**************/
+.tweedepagina main > div:nth-of-type(2) {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 3rem 0 2rem 0;
+    margin-bottom: 2rem;
+}
+
+/**********************************/
+/* uitlegbordje bij het kunstwerk */
+section {
+    left: 50%;
+    right: 50%;
+    background: #fff;
+    font-size: 0.5em;
+    font-family: "Futura Std", sans-serif;
+    text-align: left;
+    padding: 2em 2em 0 2em;
+    margin-bottom: 1rem;
+    border: 4px goldenrod ridge;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .5);
+}
+
+section:hover {
+    color: #ff81cb;
+}
+
+cite {
+    font-family: "caslongradup", sans-serif;
+    font-size: 1.5em;
+    font-style: normal;
+    margin-top: 2em;
+}
+
+h3 {
+    font-weight: bold;
+}
+
+section p {
+    text-align: right;
+    text-decoration: underline;
+}
+/**********************************/
+
+/* frame met het kunstwerk erin */
+.banksy {
+    border-style: solid;
+
+    /* de border-image-source property stelt de afbeelding in die wordt gebruikt om de border-image van het <div> element te maken, namelijk het Banksy frame */
+    border-image-source: url(https://github.com/Chevelly/frontend-development-2021/blob/master/images/banksyframe.png?raw=true);
+    border-width: 84px 80px;
+    border-image-width: 84px 80px;
+
+    /* de border-image-slice property wordt gebruikt om het Banksy frame in gebieden te verdelen, die vervolgens worden toegepast op de uiteindelijke border-image */
+    border-image-slice: 126 120;
+
+   /* de randen van het Banksy frame worden uitgerekt om de ruimte tussen elke rand op te vullen */
+    border-image-repeat: stretch;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .5);
+    max-width: 100%;
+    transition: all .5s ease 0s;
+}
+
+/* achtergrond van het frame als het kunstwerk er niet in zit */
+.banksy figure {
+    position: relative;
+    margin: 0;
+    background-color: burlywood;
+    z-index: -1;
+}
+
+/* geleidelijke transitie met een duur van 0.5 seconden wanneer het kunstwerk terug het frame in gaat */
+.banksy figure::after,
+.banksy img {
+    transition: all .5s linear 0s;
+}
+
+/* styling van het kunstwerk wanneer deze na hoveren het frame verlaat */
+.banksy figure::after {
+    content: ''; /* pseudo-element wat niets selecteert dat op de pagina bestaat, maar iets nieuws aan de pagina toevoegt */
+    position: absolute;
+    width: 100%;
+
+    /* op het kunstwerk wordt een background-image met een linear-gradient geplaatst waarbij enkele stroken roze zijn (net als de background-color van de body) en enkele stroken transparant waardoorheen het kunstwerk zichtbaar is en wat zorgt voor het iconische versnipperde effect */
+    background-image: linear-gradient(to right, transparent, transparent 9px, #ff81cb 9px, #ff81cb 11px, transparent 11px, transparent 20px);
+    background-size: 20px;
+    background-position: center;
+    top: 100%;
+    z-index: -1;
+    height: 0;
+}
+
+/* het kunstwerk in het frame */
+.banksy img {
+    display: block;
+    position: relative;
+    z-index: -1;
+    max-width: calc(30vh);
+    height: auto;
+}
+
+/* wanneer over het uitlegbordje gehoverd wordt zal het kunstwerk verticaal herpositioneren, van start positie 0% tot 70% */
+section:hover + div img {
+    transform: translateY(70%);
+    transition: all 1.5s linear 0s;
+}
+
+section:hover + div figure::after {
+    height: 100%;
+    transition: all 1.5s linear 0s;
+}
+
+/* aanpassingen in het frame tot een maximale viewport breedte van 650px */
+@media (max-width: 650px) {
+
+    .banksy {
+        border-width: 63px 60px;
+        border-image-width: 63px 60px;
+    }
+}
+
+/* aanpassingen in het frame tot een maximale viewport breedte van 540px */
+@media (max-width: 540px) {
+
+    .banksy {
+        border-width: 31.5px 30px;
+        border-image-width: 31.5px 30px;
+    }
 }
