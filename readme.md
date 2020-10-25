@@ -48,7 +48,6 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 **Screenshot(s):**
 
 ![Screenshots van de voortgang](images/proces/classesoud.png)
-![Screenshots van de voortgang](images/proces/classesnieuw.png)
 
 ### Agenda voor meeting
 
@@ -77,8 +76,7 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 **Screenshot(s):**
 
-![Screenshots van de voortgang](images/proces/classesoud.png)
-![Screenshots van de voortgang](images/proces/classesnieuw.png)
+![Screenshots van de voortgang](images/proces/voortgang2.png)
 
 ### Agenda voor meeting
 
