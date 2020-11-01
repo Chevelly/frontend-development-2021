@@ -67,7 +67,8 @@ nav input {
 
 /* eerste/bovenste streep van hamburgermenu */
 .open:before {
-    content: ""; /* pseudo-element wat niets selecteert dat op de pagina bestaat, maar iets nieuws aan de pagina toevoegt */
+    content: "";
+    /* pseudo-element wat niets selecteert dat op de pagina bestaat, maar iets nieuws aan de pagina toevoegt */
     background-color: black;
     width: 23px;
     height: 1px;
@@ -127,15 +128,20 @@ nav input {
     color: #ff81cb;
     text-decoration: none;
     transition: color 0.2s;
-    padding: 10px 0;
+    margin: 0.5em 0;
 }
 
-.burger ul:first-of-type li a:active {
-    text-decoration: underline;
+.burger ul:first-of-type li a:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ff81cb;
+    transition: width .5s;
 }
 
-.burger ul:first-of-type li a:hover {
-    text-decoration: underline;
+.burger ul:first-of-type li a:hover::after {
+    width: 100%;
 }
 
 /* de <ul> elementen in het hamburgermenu zijn op voorhand verborgen */
@@ -236,8 +242,15 @@ a {
     text-decoration: none;
 }
 
-a:visited {
+header > ul:last-of-type a:hover {
     color: black;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid #ff81cb;
+}
+
+header > ul:last-of-type a:visited {
+    color: black;
+    border-bottom: 2px solid #ff81cb;
 }
 
 /***********************/
@@ -269,7 +282,7 @@ a:visited {
     color: #fff;
 }
 
-.fa:visited {
+nav > ul:last-of-type a:visited {
     color: #ff81cb;
 }
 
@@ -278,8 +291,11 @@ a:visited {
 /********/
 main {
     display: grid;
+    /* auto-fit zorgt ervoor dat de article blokken die ik heb in de beschikbare ruimte passen door ze zo ver mogelijk uit te vouwen als nodig is om in de rijgrootte te passen */
+    /* minimale breedte van 300px en een maximale breedte van 1fr zodat de article blokken elke extra ruimte gelijkmatig verdeeld */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     height: calc(100vh - 32px);
+    /* de main zo groot als de viewport minus de hoogte van de footer */
     margin-top: 0;
     padding-top: 80px;
 }
@@ -289,40 +305,40 @@ main {
 /*********************/
 
 /* elk article heeft een eigen background-image */
-main article:first-of-type {
+.eerstepagina article:first-of-type {
     background-image: url('https://mocomuseum.com/uploads/2018/03/home-3.jpg');
 }
 
 /* en bij het hoveren weer een andere background-image */
-main article:first-of-type:hover {
+.eerstepagina article:first-of-type:hover {
     background-image: url('https://mocomuseum.nl/uploads/2018/03/bg_opening-hours.jpg');
 }
 
-main article:nth-of-type(2) {
+.eerstepagina article:nth-of-type(2) {
     background-image: url('https://mocomuseum.com/uploads/2018/03/home-1.jpg');
 }
 
-main article:nth-of-type(2):hover {
+.eerstepagina article:nth-of-type(2):hover {
     background-image: url('');
 }
 
-main article:nth-of-type(3) {
+.eerstepagina article:nth-of-type(3) {
     background-image: url('https://mocomuseum.com/uploads/2018/10/New_Exhibition_Dots.jpg');
 }
 
-main article:nth-of-type(3):hover {
+.eerstepagina article:nth-of-type(3):hover {
     background-image: url('https://mocomuseum.nl/uploads/2020/02/DiamondRoom-copy-2.jpg');
 }
 
-main article:nth-of-type(4) {
+.eerstepagina article:nth-of-type(4) {
     background-image: url('https://mocomuseum.com/uploads/2018/03/bg_landingpage.jpg');
 }
 
-main article:nth-of-type(4):hover {
+.eerstepagina article:nth-of-type(4):hover {
     background-image: url('https://mocomuseum.nl/uploads/2018/11/wat-te-doen-met-pubers-in-de-vakantie-1600.jpg');
 }
 
-main article {
+.eerstepagina article {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -339,7 +355,7 @@ main article {
     z-index: 2;
 }
 
-article h2 {
+.eerstepagina article h2 {
     margin: 0;
     font-family: 'caslongradup', sans-serif;
     font-size: 2em;
@@ -347,11 +363,11 @@ article h2 {
     text-align: center;
 }
 
-main article:first-of-type {
+.eerstepagina article:first-of-type {
     color: #ff81cb;
 }
 
-main article:nth-of-type(4) h2 {
+.eerstepagina article:nth-of-type(4) h2 {
     color: #fff;
 }
 
@@ -363,7 +379,7 @@ article p {
     text-align: center;
 }
 
-article a {
+.eerstepagina article a {
     display: block;
     position: absolute;
     width: 100%;
@@ -372,6 +388,8 @@ article a {
     left: 0;
     z-index: 99;
 }
+
+
 
 /*****************/
 /* 2 CTA-BUTTONS */
@@ -407,6 +425,11 @@ main button:first-of-type {
     border-radius: 100%;
 }
 
+main button:first-of-type:hover {
+    color: black;
+    background: white;
+}
+
 main button:nth-of-type(2) {
     right: -20px;
     width: 128.5px;
@@ -414,6 +437,10 @@ main button:nth-of-type(2) {
     color: red;
     background: white;
     border-radius: 128.5px;
+}
+
+main button:nth-of-type(2):hover {
+    background: black;
 }
 
 /* een animatie die de grootte van de CTA-buttons transformeert */
@@ -432,17 +459,19 @@ main button {
     /* de animatie duurt 1.3 seconden en herhaalt eindeloos voor een pulserend effect */
 }
 
+
+
 /**********/
 /* FOOTER */
 /**********/
-footer {
+.eerstepagina footer {
     display: block;
     position: relative;
     width: 100%;
     min-height: 32px;
 }
 
-span {
+.eerstepagina footer > span {
     display: inline-block;
     position: absolute;
     padding: 0 10px;
@@ -508,7 +537,7 @@ fieldset label {
     font-size: 18px;
 }
 
-#email {
+#newsletter {
     flex: 1;
     width: 50%;
     font-size: 40px;
@@ -525,7 +554,6 @@ fieldset button {
     color: #fff;
     border: none;
     margin: 0;
-
     font-family: "Futura Std", sans-serif;
     max-width: 70em;
     position: relative;
@@ -538,14 +566,14 @@ fieldset button {
 /******************/
 /* RECENSIE BANNER */
 /******************/
-footer div {
+.eerstepagina footer div {
     height: 32px;
     overflow: hidden;
     position: relative;
     background: rgba(255, 255, 255, 0.8);
 }
 
-footer div > p {
+.eerstepagina footer div > p {
     position: absolute;
     width: 2200px;
     height: 100%;
@@ -580,6 +608,11 @@ strong {
 /**************************/
 /* STORIES | DETAILPAGINA */
 /**************************/
+.tweedepagina {
+    overflow-x: hidden;
+    height: 100%;
+}
+
 .tweedepagina header {
     width: 100vw;
     margin: 0;
@@ -595,27 +628,28 @@ strong {
     display: flex;
     flex-direction: column;
     padding-top: 100px;
+    height: 100%;
 }
 
 /******************/
 /* ARTICLE SLIDER */
 /******************/
-.tweedepagina main article:first-of-type {
+.slideshow > article:first-of-type {
     background-image: url('https://mocomuseum.nl/uploads/2020/10/Screenshot-2020-10-13-at-13.26.51.png');
     z-index: 0;
 }
 
-.tweedepagina main article:nth-of-type(2) {
+.slideshow > article:nth-of-type(2) {
     background-image: url('https://mocomuseum.nl/uploads/2020/02/Irma-de-Vries24249.jpg');
     z-index: 1;
 }
 
-.tweedepagina main article:nth-of-type(3) {
+.slideshow > article:nth-of-type(3) {
     background-image: url('https://mocomuseum.nl/uploads/2020/02/Kaleidoscope1.jpg');
     z-index: -2;
 }
 
-.tweedepagina main article:nth-of-type(4) {
+.slideshow > article:nth-of-type(4) {
     background-image: url('https://mocomuseum.nl/uploads/2020/01/ArtGirlRisingDuo.png');
     z-index: -1;
 }
@@ -659,6 +693,15 @@ strong {
 }
 
 .slideshow > article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     position: absolute;
     top: 0;
     left: calc(80%-180px);
@@ -669,15 +712,15 @@ strong {
 }
 
 /* de animatie start pas na 2, 4 of 6 seconden voor de 2e, 3e en 4e article */
-.tweedepagina main article:nth-of-type(2) {
+.slideshow > article:nth-of-type(2) {
     animation-delay: 2s;
 }
 
-.tweedepagina main article:nth-of-type(3) {
+.slideshow > article:nth-of-type(3) {
     animation-delay: 4s;
 }
 
-.tweedepagina main article:nth-of-type(4) {
+.slideshow > article:nth-of-type(4) {
     animation-delay: 6s;
 }
 
@@ -686,8 +729,9 @@ strong {
     font-size: 25px;
     font-weight: 400;
     letter-spacing: -2.5px;
-    max-width: 10em;
+    max-width: 300px;
     text-align: left;
+    padding-left: 1.5em;
     bottom: 60px;
     width: calc(100% - 100px);
     color: white;
@@ -696,24 +740,117 @@ strong {
 .slideshow > article > a {
     display: block;
     top: 165px;
-    left: 65px;
+    padding-left: 4em;
     color: white;
     font-size: 10px;
     text-decoration: underline;
+}
+
+
+/*****************/
+/* ARTICLE LIJST */
+/*****************/
+
+.articlelijst {
+    margin: 50px auto;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(100% - 100px);
+}
+
+.articlelijst > article {
+    margin-top: 1.5em;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+.articlelijst > article:first-of-type {
+    margin-top: 0;
+}
+
+.articlelijst > article > img {
+    border-style: none;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    max-height: 475px;
+}
+
+.articlelijst > article > h2 {
+    font-family: "Futura Std", sans-serif;
+    margin-top: 0.25em;
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+.articlelijst > article > h2 > a {
+    text-decoration: none;
+    color: white;
 }
 
 /*****************/
 /* 2 CTA-BUTTONS */
 /*****************/
 .tweedepagina button {
-    display: none; /* omwille van het kunstwerk */
     bottom: -30px;
+}
+
+/**********/
+/* FOOTER */
+/**********/
+.tweedepagina footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 900;
+    padding: 1em;
+    letter-spacing: .1em;
+}
+
+.tweedepagina footer ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    right: 0;
+    list-style: none;
+}
+
+.tweedepagina footer li {
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+.tweedepagina footer li a {
+    left: 0;
+}
+
+.tweedepagina footer li a:hover {
+    color: black;
+    padding-bottom: 0.25em;
+    border-bottom: 2px solid #fff;
+}
+
+.tweedepagina footer li a:visited {
+    color: black;
+    border-bottom: 2px solid #fff;
 }
 
 /**************/
 /* BANKSY ART */
 /**************/
-.tweedepagina main > div:nth-of-type(2) {
+.derdepagina main > div {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -755,6 +892,7 @@ section p {
     text-align: right;
     text-decoration: underline;
 }
+
 /**********************************/
 
 /* frame met het kunstwerk erin */
@@ -769,7 +907,7 @@ section p {
     /* de border-image-slice property wordt gebruikt om het Banksy frame in gebieden te verdelen, die vervolgens worden toegepast op de uiteindelijke border-image */
     border-image-slice: 126 120;
 
-   /* de randen van het Banksy frame worden uitgerekt om de ruimte tussen elke rand op te vullen */
+    /* de randen van het Banksy frame worden uitgerekt om de ruimte tussen elke rand op te vullen */
     border-image-repeat: stretch;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .5);
     max-width: 100%;
@@ -792,7 +930,8 @@ section p {
 
 /* styling van het kunstwerk wanneer deze na hoveren het frame verlaat */
 .banksy figure::after {
-    content: ''; /* pseudo-element wat niets selecteert dat op de pagina bestaat, maar iets nieuws aan de pagina toevoegt */
+    content: '';
+    /* pseudo-element wat niets selecteert dat op de pagina bestaat, maar iets nieuws aan de pagina toevoegt */
     position: absolute;
     width: 100%;
 
