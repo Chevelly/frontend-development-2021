@@ -242,6 +242,10 @@ a {
     text-decoration: none;
 }
 
+header > ul:last-of-type a {
+    color: black;
+}
+
 header > ul:last-of-type a:hover {
     color: black;
     padding-bottom: 0.5em;
