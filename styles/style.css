@@ -14,8 +14,8 @@ body {
 /* font importeren uit foldermappen */
 @font-face {
     font-family: 'caslongradup';
-    src: url('../fonts/caslongrad.otf'),
-        url('../fonts/caslongrad.ttf');
+    src: url('../fonts/CaslonGraD.otf'),
+        url('../fonts/CaslonGraD.ttf');
     font-style: normal;
     font-weight: normal;
 }
