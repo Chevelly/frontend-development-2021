@@ -19,7 +19,58 @@
 14. [classList.toggle, line 10 (script.js)](https://dlo.mijnhva.nl/d2l/common/dialogs/quickLink/quickLink.d2l?ou=192602&type=coursefile&fileId=FED+20-21+-+Blok+1+-+Oefening+media+queries.pdf)
 
 
-## Eindgesprek (week 7/8)
+## Herkansing Eindgesprek (week 10)
+
+*-dit ging goed-*
+
+Naar aanleiding van het eindgesprek en de feedback op mijn opdracht heb ik de volgende punten verbeterd:
+
+**++** De talen navigatie op index.html toont nu bij hoveren een streep onder de li
+
+**++** De links in het hamburgermenu tonen nu bij hoveren een streep onder de li
+
+**++** Bij hoveren over de shop button verandert de achtergrondkleur van zwart naar wit
+
+**++** Bij hoveren over de tickets button verandert de achtergrondkleur van wit naar zwart
+
+**++** De article slider op stories.html heeft met behulp van Javascript rondjes die meebewegen met de transitie van de articles
+
+**++** De artikelen zoals zichtbaar op de webpagina van MOCO is toegevoegd aan stories.html
+
+**++** De footer zoals zichtbaar op de webpagina van MOCO is toegevoegd aan stories.html
+
+**++** De detailpagina (stories.html) is nu 1-op-1 nagemaakt van de webpagina van MOCO
+
+**++** Mijn versie van het Banksy kunstwerk (banksy.html) is nu te vinden onder de link 'Exposities'
+
+**++** Mijn eindopdracht bestaat nu uit 1 stylesheet in plaats van 2
+
+**++** Het lege div'je in de index.html wat een error opleverde is vervangen voor een span element
+
+**++** Mijn 3 HTML files zijn W3C gevalideerd, zie onderstaande screenshots
+
+**++** Mijn CSS file is W3C gevalideerd, zie onderstaande screenshots
+
+**++** Alle files zijn nu nog meer voorzien van comments om de code begrijpelijk te maken voor ander
+
+
+
+*-dit was lastig-*
+
+**--** Door het Banksy kunstwerk op een derde pagina te plaatsen en een lijst aan articles aan de tweede pagina toe te voegen ervaarde ik een flink aantal tegenslagen in de CSS file. Ik raakte namelijk volledig het overzicht kwijt wat betreft het gebruiken van pseudo-selecteren. Ik heb zo ongeveer elke mogelijke combinatie (blijkbaar niet dus) geprobeerd om elementen aan te roepen maar het wilde af en toe niet werken op de manier dat ik wilde. Als resultaat hiervan heb ik een classes toegepast om toch tot het gewenste resultaat te komen.
+
+
+**Screenshot(s):**
+
+![Screenshots van de herkansing van het eindresultaat](images/proces/hereindresultaat.png)
+![Screenshots van de W3C validatie mbt index.html](images/proces/w3cindex.png)
+![Screenshots van de W3C validatie mbt stories.html](images/proces/w3cstories.png)
+![Screenshots van de W3C validatie mbt banksy.html](images/proces/w3cbanksy.png)
+![Screenshots van de W3C validatie mbt style.css](images/proces/w3cstyle.png)
+
+
+
+## Eindgesprek (week 9)
 
 *-dit ging goed-*
 
@@ -32,15 +83,33 @@
 
 *-dit was lastig-*
 
-**--** tijdens de intake had ik aangegeven dat ik de landingspagina en de tickets pagina wilde namaken maar tijdens het coderen van de Tickets pagina wat bestond uit een gigantisch formulier raakte ik erg gedemotiveerd om het mij niet uitdaagde. Daarnaast had ik al even met een form element mogen spelen op de landingspagina. Hierom heb ik het besluit genomen mijn plan om te gooien en de Stories pagina na te maken in plaats van de Tickets pagina. Op de Stories pagina heb ik gekozen om de slider na te maken en de resterende ruimte te gebruiken voor een bijzondere toevoeging aka surface experience.
+**--** Tijdens de intake had ik aangegeven dat ik de landingspagina en de tickets pagina wilde namaken maar tijdens het coderen van de Tickets pagina wat bestond uit een gigantisch formulier raakte ik erg gedemotiveerd om het mij niet uitdaagde. Daarnaast had ik al even met een form element mogen spelen op de landingspagina. Hierom heb ik het besluit genomen mijn plan om te gooien en de Stories pagina na te maken in plaats van de Tickets pagina. Op de Stories pagina heb ik gekozen om de slider na te maken en de resterende ruimte te gebruiken voor een bijzondere toevoeging aka surface experience.
 
-**--** net als bij voortgang 3 vond ik het bij de weg naar het eindresultaat af en toe erg lastig om rekening te houden met te pseudo-selecteren wanneer ik niet in chronologische volgorde werkte. Ik heb mijn code een behoorlijk aantal keer 'kapot' gemaakt omdat ik middenin mijn HTML zat te wroeten. Dit zorgde voor behoorlijk wat vertraging.
+**--** Net als bij voortgang 3 vond ik het bij de weg naar het eindresultaat af en toe erg lastig om rekening te houden met te pseudo-selecteren wanneer ik niet in chronologische volgorde werkte. Ik heb mijn code een behoorlijk aantal keer 'kapot' gemaakt omdat ik middenin mijn HTML zat te wroeten. Dit zorgde voor behoorlijk wat vertraging.
 
-**--** ik heb vorig jaar het vak Frontend for Designers gevolgd bij Sanne. En daar was javascript de boeman en werden we gemotiveerd om enkel in CSS attributen te denken. Ik merkte dat dit bij deze opdracht nog niet helemaal uit mijn systeem was omdat ik eerder dacht in CSS oplossingen dan in het toevoegen van Javascript waardoor ik op het laatste moment mijn code voor het nieuwsbrief formulier aan heb moeten passen om toch een stukje Javascript in mijn opdracht te hebben.
+**--** Ik heb vorig jaar het vak Frontend for Designers gevolgd bij Sanne. En daar was javascript de boeman en werden we gemotiveerd om enkel in CSS attributen te denken. Ik merkte dat dit bij deze opdracht nog niet helemaal uit mijn systeem was omdat ik eerder dacht in CSS oplossingen dan in het toevoegen van Javascript waardoor ik op het laatste moment mijn code voor het nieuwsbrief formulier aan heb moeten passen om toch een stukje Javascript in mijn opdracht te hebben.
 
 **Screenshot(s):**
 
 ![Screenshots van het eindresultaat](images/proces/eindresultaat.png)
+
+### Verslag van meeting
+
+-uitkomsten na afloop-
+
+**^** het eindresultaat is op dit moment nog onvoldoende
+
+**^** er moeten nog een aantal puntjes op de i gezet worden, namelijk:
+    ⋅⋅* 1 stylesheet in plaats van 2
+    ⋅⋅* styling van de elementen bij hoveren
+    ⋅⋅* 1 op 1 met gekozen website mbt detailpagina
+    ⋅⋅* w3c validatie, de errors aanpakken
+
+
+**Screenshot(s):**
+
+![Screenshots van de beoordeling](images/proces/beoordeling.png)
+
 
 
 ## Voortgang 3 (week 6)
