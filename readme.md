@@ -61,6 +61,7 @@ Naar aanleiding van het eindgesprek en de feedback op mijn opdracht heb ik de vo
 
 
 **Screenshot(s):**
+
 Het eindresultaat
 ![Screenshots van de herkansing van het eindresultaat](images/proces/hereindresultaat.png)
 
