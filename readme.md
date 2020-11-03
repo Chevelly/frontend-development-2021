@@ -61,11 +61,19 @@ Naar aanleiding van het eindgesprek en de feedback op mijn opdracht heb ik de vo
 
 
 **Screenshot(s):**
-
+Het eindresultaat
 ![Screenshots van de herkansing van het eindresultaat](images/proces/hereindresultaat.png)
+
+W3C validatie - index.html
 ![Screenshots van de W3C validatie mbt index.html](images/proces/w3cindex.png)
+
+W3C validatie - stories.html
 ![Screenshots van de W3C validatie mbt stories.html](images/proces/w3cstories.png)
+
+W3C validatie - banksy.html
 ![Screenshots van de W3C validatie mbt banksy.html](images/proces/w3cbanksy.png)
+
+W3C validatie - style.css
 ![Screenshots van de W3C validatie mbt style.css](images/proces/w3cstyle.png)
 
 
@@ -100,9 +108,13 @@ Naar aanleiding van het eindgesprek en de feedback op mijn opdracht heb ik de vo
 **^** het eindresultaat is op dit moment nog onvoldoende
 
 **^** er moeten nog een aantal puntjes op de i gezet worden, namelijk:
+
     ⋅⋅* 1 stylesheet in plaats van 2
+
     ⋅⋅* styling van de elementen bij hoveren
+
     ⋅⋅* 1 op 1 met gekozen website mbt detailpagina
+
     ⋅⋅* w3c validatie, de errors aanpakken
 
 
