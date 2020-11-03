@@ -102,7 +102,7 @@ W3C validatie - style.css
 
 ![Screenshots van het eindresultaat](images/proces/eindresultaat.png)
 
-### Verslag van meeting
+### Verslag van eindgesprek
 
 -uitkomsten na afloop-
 
